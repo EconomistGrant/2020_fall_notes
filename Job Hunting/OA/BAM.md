@@ -1,0 +1,22 @@
+# Self Intro, why BAML
+Hi my name is Songhao Li, I am a master of finance student at mit, prior to mit I studied ecnomics at CUHK
+professionally speaking I worked as a summer quant researcher at a hedge fund of China, I researched into the futures market of China
+after that I found another quant researcher intern a top security group of China, I implemented several machine learning strategies to identify "factors" in the market there.
+So from these experiences I found it very exciting to apply my skills and knowlegde into quant finance, that is one of the primary reason I applied for this position,
+and another important reason is that I had great talk with xx and xx who has been a summer associate of this program, and they shared that BoA is a very sharing and collaborative environment, working as a xx can give the chance to work with professionals, to network with literally everyone in the workplace, or learn and ask for advice from sophisticated seniors in the market, those are very important things for me to start my career 
+# Key accomplihsments which illustrates your personal initiatives beyond what was required
+So I want about a project I finished during my previous internship at HT securities, so that was a project implementing genetic programming, a machine learning algorithm into the futures market. I feel this is a accomplishment for me because the position was meant for a master student and I was only an undergrad and we finshed the project with very good result and very popular report among our clients.
+
+So one of the key contribution I made which I think is beyond what was required was that when we already was about to finish the project, I found a way to improve the efficiency by reducing the running time of the program a lot. That was really not required in my job description because I was handling with the strategy part not optimization part but I thought if potentially we need to deliver this to our clients, if I have the chance to improve a little bit I should do. And it turned out to be helpful, one of our clients just praised how efficient and great the program is running.
+
+That sort of showed how I am, I always strive for making what I am responsible of better, not just finished what is required or mmet some minumum standard
+# A quant project
+Yeah I want to share a very intersting project I finished during my previous internship, so it was about applying reinforcement learning, which is a very popular ml algorithm nowadays, into the futures market of China. The end goal is letting the machine learning learn about the market, and to decide buy and sell to make profit. I set up the program in python and I read data from SQL server. So SQL, I had to use that because that was the data base of our company, and Python, a great coding language to set up machine learning environment with lots of open libraries and I used tensorflow by google and Gym by OpenAI
+
+the end result was very good. Although it was a very explorative project, I finished in 8 weeks but the machine learning core was really learning something and can make profit. I presented to senior associates in the company, they liked my job and they asked me to mentor a team work on this because I was about to leave my position
+# team with different background
+
+# learn some skills outside school
+So basically that was a machine learning project called reinforcement learning, I was about to implement that to investment strategies but I have never learned reinforcement learning or even machine learning at that time. So to learn it I reached out for multiple sources, firstly I asked for advice from computer science and data science students about what was the best way to learn it, so how to learn something is really important when you want to learn something. Then I went to some online courses like coursera, I learned a lot from coursera, and I also learned from some open source projects online from companies like google and OpenAI. During the time of work I also kept in touch my friends learning DS, and I used stackoverflow a lot just to solve some upcoming issues.
+
+Yeah the skill in reinforcement learning is really important because that was the fundamental of this project, I finished the peoject in good shape, I presented to senior associates in the company, they liked my job and they asked me to mentor a team work on this because I was about to leave my position. I am still using that, I had a small rl learning project on github, it was fun, and I am maintaining and managing the project with my friends.

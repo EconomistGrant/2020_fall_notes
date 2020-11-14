@@ -11,30 +11,31 @@ map, unordered_map, map, vector, heap, queue, stack
 multiset<int> window(nums.begin(), nums.begin() + k); # 抽取前k个元素
 
 ## map / unordered_map
-insert
-map[key] = value;
+```c++
+map[key] = value
 map.insert(make_pair<int, string>(222, "Songhao"))
-find
-map.find(key_value) //return an iterator
-delete 
-map.erase(key)
-iterate
+map.find(key_value) //unordered_set.find
+map.erase(key)      //unordered_set.remove, or erase iterator
 for (iter = map.begin(); iter != map.end(); ++iter){iter -> first;}
-update
-map[key]++; //useful to count!
-convert and sort
-vector< pair<int,int> > vec(map.begin(), map.end())
+// update
+map[key]++; //useful to count! 如果key不存在，第一次call这行会直接变成1，真的很方便
+
+// convert and sort
+vector<pair<int,int>> vec(map.begin(), map.end())
 sort(vec.begin(), vec.end())
+```
 
 ## vector
-vector(int n, value)
-vector(begin, end)
-int myints[] ={1,2,3}; vector<int>v = (myints, myints+3);
+vector(int num, value) !!!!!!!!!!!!!!!!!!!初始化dp的时候很舒服
+int myints[] ={1,2,3}; vector<int>v(myints, myints+3);
 int myints[10][10]
 
 vec.push_back(), vec.pop_back()
 vec.size(), vec.clear()
-
+```c++
+auto it = vec.begin();
+while (it!=vec.end){cout << *it << endl;it++;}
+```
 ## heap
 heap建立在基础数据结构之上
 make_heap(v.begin(), v.end(), less<int>());//这样在前面的是最大的
@@ -64,3 +65,64 @@ s.top(), s.pop, s.push()
 auto mid = next(window.begin(), k / 2);
 mid++;mid--
 
+
+# array-based stack
+多态 封装
+```c++
+template <typename ValueType>
+class Stack{
+public:
+    Stack();
+    ~Stack();
+    void push(ValueType value);
+    ValueType pop();
+    //------------------------------------
+    int size() const;
+    bool isEmpty() const;
+    void clear();
+
+    ValueType peek() const;
+    
+private:
+    ValueType *array;
+    int capacity;
+    int count;
+    void expandCapacity();
+};
+
+template <typename ValueType>
+Stack<ValueType>::Stack(){
+    capacity = INITIAL_CAPACITY;
+    array = new ValueType[capacity];
+    count = 0;
+}
+
+template <typename ValueType>
+Stack<ValueType>::~Stack(){
+    delete[] array;
+}
+
+template <typename ValueType>
+Stack<ValueType>::expandCapacity(){
+    ValueType *oldArray = array;
+    capacity *= 2;
+    array = new ValueType[capacity];
+    for (int i = 0; i < count; i++) array[i] = oldArray[i];
+    delete[] oldArray;
+}
+
+template <typename ValueType>
+Stack<ValueType>::push(ValueType ch){
+    if (count == capacity) expandCapacity();
+    array[count++] = ch;
+}
+
+template <typename ValueType>
+ValueType Stack<ValueType>::pop(){
+    if (count != 0) return array[--count];
+    else{
+        ValueType empty;
+        return empty;
+    } 
+}
+```
